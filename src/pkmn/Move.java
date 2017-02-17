@@ -1,3 +1,4 @@
+package pkmn;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
@@ -18,7 +19,23 @@ public class Move {
 	private String flags;
 	private String description;
 	
-	Move (String name) {
+	public Move () {
+		this.ID = 0;
+		this.name = "---";
+		this.function = -1;
+		this.power = 0;
+		this.type = "";
+		this.category = "";
+		this.accuracy = 0;
+		this.pp = 0;
+		this.effectChance = 0;
+		this.target = 0;
+		this.priority = 0;
+		this.flags = "";
+		this.description = "";
+	}
+	
+	public Move (String name) {
 		String line = null;
 		
 		try {
@@ -51,35 +68,35 @@ public class Move {
 		}
 	}
 	
-	int getID () {
+	public int getID () {
 		return this.ID;
 	}
 	
-	String getName () {
+	public String getName () {
 		return this.name;
 	}
 	
-	int getPower () {
+	public int getPower () {
 		return this.power;
 	}
 	
-	String getType () {
+	public String getType () {
 		return this.type;
 	}
 	
-	String getCategory () {
+	public String getCategory () {
 		return this.category;
 	}
 	
-	int getAccuracy () {
+	public int getAccuracy () {
 		return this.accuracy;
 	}
 	
-	String getDescribtion () {
+	public String getDescribtion () {
 		return this.description;
 	}
 	
-	int getPP () {
+	public int getPP () {
 		return this.pp;
 	}
 	

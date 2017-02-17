@@ -1,3 +1,4 @@
+package pkmn;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
@@ -8,7 +9,13 @@ public class Ability {
 	private String name;
 	private String describtion;
 	
-	Ability (String name) {
+	public Ability () {
+		this.ID = 0;
+		this.name = "---";
+		this.describtion = "";
+	}
+	
+	public Ability (String name) {
 		String line = null;
 		
 		try {
