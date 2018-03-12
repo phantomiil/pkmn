@@ -1,6 +1,7 @@
 package pkmn;
 
 public class State {
+        // State class handles pkmn state as hp, atk, def etc
 	private int hp;							//pokemons current hp
 	private int totalhp;					//pokemons total hp
 	private int attack;						//pokemons attack

@@ -2,6 +2,7 @@ package character;
 import pkmn.Pokemon;
 
 public class Trainer {
+        // Trainer class handles player and non-player characters
 	private String name;
 	private Pokemon[] pkmn = new Pokemon[6];
 	

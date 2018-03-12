@@ -1,6 +1,7 @@
 package pkmn;
 
 public class Appearence {
+        // Appearence class provides pkmn attributes for challenges
 	private int beauty;			//pokemons beauty
 	private int cool;			//pokemons coolness
 	private int cute;			//pokemons cuteness

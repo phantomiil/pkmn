@@ -4,6 +4,7 @@ import character.*;
 import pkmn.Pokemon;
 
 public class Arena {
+        // Arena class handles pkmn fight environment
 	private int numberOfFighters = 1;		//number of fighters on one side at the same time
 	private Fighter[] blue = new Fighter[6];
 	private Fighter[] red = new Fighter[6];

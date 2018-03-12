@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class Ability {
+        // Ability class provides abilitys for pkmn
 	static String PKM_ABILITY = "Pokemon/abilities.txt";
 	
 	private int ID;

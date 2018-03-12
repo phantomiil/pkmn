@@ -3,6 +3,7 @@ package pkmn.arena;
 import pkmn.*;
 
 public class Fighter {
+        // Fighter class smaller class clone of Pokemon, handles pkmn status in fight
 
 	private String name;
 	private int level;
@@ -16,7 +17,7 @@ public class Fighter {
 	private String item = "";		//carried item
 	private int gender = 0;			//pokemons gender
 	
-	private Moves moves = new Moves();
+	private Moveset moveset = new Moveset();
 	
 	public Fighter () {
 		this.name = "---";
@@ -33,7 +34,7 @@ public class Fighter {
 		this.state = pkmn.getState();
 		this.item = pkmn.getItem();
 		this.gender = pkmn.getGender();
-		this.moves = pkmn.getMoves();
+		this.moveset = pkmn.getMoveset();
 	}
 	
 	public String getName () {
@@ -41,7 +42,7 @@ public class Fighter {
 	}
 	
 	public Move getMove(int i) {
-		return this.moves.getMove(i);
+		return this.moveset.getMove(i);
 	}
 	
 	public State getState() {

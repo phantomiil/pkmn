@@ -1,6 +1,7 @@
 package pkmn;
 
 public class Type {
+        // Type class handles pkmn type
 	
 	private String typeStr;
 	private int type;

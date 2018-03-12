@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.Random;
 
 public class Pokemon {
+        // Pokemon class handle pkmn
 	static String PKM_SPECIES = "Pokemon/species.txt";
 	Random rg = new Random();
 	
@@ -30,7 +31,7 @@ public class Pokemon {
 	
 	private Appearence app = new Appearence();
 	
-	private Moves moves = new Moves();		//pokemons known moves
+	private Moveset moveset = new Moveset();        //pokemons known moves
 	
 	private int eggsteps = 0;		//egg steps if 0 it is a pokemon
 	private int ballused = 0;		//used ball to catch
@@ -111,8 +112,8 @@ public class Pokemon {
 		//System.out.printf("%d/%d\t\t%d\n",this.hp, this.totalhp, this.status);
 		System.out.printf("Exp. %d/%d\t%s\n", this.exp, this.calcExpForLevel(this.level+p1), this.item);
 		System.out.println("");
-		//System.out.printf("%s\t\t%s\n", this.moves[0].getName(), this.moves[1].getName());
-		//System.out.printf("%s\t\t%s\n", this.moves[2].getName(), this.moves[3].getName());
+		//System.out.printf("%s\t\t%s\n", this.moveset[0].getName(), this.moveset[1].getName());
+		//System.out.printf("%s\t\t%s\n", this.moveset[2].getName(), this.moveset[3].getName());
 	}
 	
 	public Pokemon catchIt(int ball) {
@@ -178,8 +179,8 @@ public class Pokemon {
 		return this.gender;
 	}
 	
-	public Moves getMoves () {
-		return this.moves;
+	public Moveset getMoveset () {
+		return this.moveset;
 	}
 	
 // PRIVATE FUNCTIONS //	
@@ -326,7 +327,7 @@ public class Pokemon {
 						counter = (counter+1)%4;
 					}
 				}
-				this.moves = new Moves(new Move(selected[0]), new Move(selected[1]), new Move(selected[2]), new Move(selected[3]));
+				this.moveset = new Moveset(new Move(selected[0]), new Move(selected[1]), new Move(selected[2]), new Move(selected[3]));
 				break;
 			}
 			case "Compatibility": {
@@ -367,7 +368,7 @@ public class Pokemon {
 					String[] s = var[1].split(",");
 					Move mv = new Move(s[rg.nextInt(s.length)]);
 					int r = rg.nextInt(3);
-					this.moves.replaceMove(mv, r);
+					this.moveset.replaceMove(mv, r);
 				}
 				break;
 			case "Evolutions":

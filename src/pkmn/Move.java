@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class Move {
+        // Move class handles pkmn attack moves
 	static String PKM_MOVES = "Pokemon/moves.txt";
 	
 	private int ID;
